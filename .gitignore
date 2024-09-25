@@ -3,6 +3,7 @@
 **/.DS_Store
 
 target
+Cargo.lock
 .vscode
 .idea
 pkg/
