@@ -62,7 +62,12 @@ p256 = { version = "0.13.2", optional = true, default-features = false, features
 
 # gnarl verify precompile
 ethabi = "18.0.0"
-gnark = { git = "ssh://git@github.com/nbchain/gnark-rs.git", package = "gnark-rs"}
+gnark = { git = "ssh://git@github.com/NBnet/gnark-rs.git", package = "gnark-rs"}
+
+# expander verify precompile
+#expander = { git = "ssh://git@github.com/NBnet/Expander.git", package = "expander-rs" }
+#arith = { git = "ssh://git@github.com/NBnet/Expander.git"  }
+#halo2curves = { git = "https://github.com/PolyhedraZK/halo2curves", default-features = false, features = [ "bits" ] }
 
 # utils
 cfg-if = { version = "1.0", default-features = false }

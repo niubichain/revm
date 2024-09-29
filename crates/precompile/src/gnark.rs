@@ -1,6 +1,6 @@
+use crate::primitives::Bytes;
 use ethabi::{ParamType, Token};
 use gnark::{gnark_groth16_verify, gnark_plonk_verify};
-use primitives::Bytes;
 
 use crate::{
     Precompile, PrecompileError, PrecompileErrors, PrecompileOutput, PrecompileResult,
