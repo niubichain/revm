@@ -64,6 +64,11 @@ p256 = { version = "0.13.2", optional = true, default-features = false, features
 ethabi = "18.0.0"
 gnark = { git = "https://github.com/NBnet/gnark-rs.git", package = "gnark-rs"}
 
+# expander verify precompile
+expander = { git = "https://github.com/NBnet/Expander.git", package = "expander-rs", optional = true }
+arith = { git = "https://github.com/NBnet/Expander.git", optional = true  }
+halo2curves = { git = "https://github.com/NBnet/halo2curves", default-features = false, features = [ "bits" ], optional = true }
+
 # utils
 cfg-if = { version = "1.0", default-features = false }
 
@@ -89,6 +94,8 @@ std = [
 ]
 hashbrown = ["revm-primitives/hashbrown"]
 asm-keccak = ["revm-primitives/asm-keccak"]
+
+expander = ["dep:expander", "dep:arith", "dep:halo2curves"]
 
 optimism = ["revm-primitives/optimism", "secp256r1"]
 # Optimism default handler enabled Optimism handler register by default in EvmBuilder.
